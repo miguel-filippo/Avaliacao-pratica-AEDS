@@ -50,19 +50,23 @@ int verificaBalanceamento(Queue* filaPrincipal, Stack* pilhaAuxiliar) {
 
 // Função para testar a função verificaBalanceamento()
 void testa_verificaBalanceamento() {
-    // Declaração das strings de teste
-    char *test1 = "))(}{][][{}))()]})";
-    char *test2 = "{[()]}";
-    char *test3 = "{{[[(())]]}}";
-    char *test4 = "{[}";
+    int n;
+    printf("Digite o número de testes: ");
+    scanf("%d", &n); // Recebe o número de testes
 
+    char testes[n][100]; // Cria um vetor de strings para armazenar os testes
 
-    // Conversão das strings para filas
-    Queue* test1Queue = stringToQueue(test1);
-    Queue* test2Queue = stringToQueue(test2);
-    Queue* test3Queue = stringToQueue(test3);
-    Queue* test4Queue = stringToQueue(test4);
-
+    // Recebe as N strings de teste
+    for (int i = 1; i <= n; i++) {
+        printf("Digite o teste %d: ", i);
+        scanf("%s", testes[i]);
+    }
+    
+    // Converte as strings de teste em filas
+    Queue* testesQueue[n];
+    for (int i = 1; i <= n; i++) {
+        testesQueue[i] = stringToQueue(testes[i]);
+    }
 
     // Cria a pilha auxiliar
     Stack* pilhaAuxiliar = createStack();
