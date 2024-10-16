@@ -1,0 +1,35 @@
+Por favor, para contribuir com o trabalho, tenha as coisas abaixo em mente!
+
+Instruções gerais  
+1. Leia atentamente a essas instruções e, também, às descrição dos exercícios para garantir que você está executando o que foi pedido.  
+  - O não atendimento de qualquer item descrito neste documento, implicará perda de nota.  
+  - O não atendimento ao que tenha sido pedido por qualquer exercício poderá implicar nota 0 (zero) naquele exercício.  
+
+2. O trabalho pode ser feito em grupo de no mínimo dois integrantes e no máximo até quatro integrantes.  
+  - Somente um integrante do grupo deve enviar a atividade.  
+
+3. Siga boas práticas de programação, pois, caso contrário, poderá causar perda de nota:  
+  - dar nomes intuitivos para as variáveis;  
+  - dar nomes intuitivos para as funções;  
+  - comentar o código.  
+
+4. Tentativa de fraude: cuidado com plágio ou outros tipos de fraude. Qualquer tipo de fraude resultará em nota zero.  
+  - Se for detectado plágio entre grupos, a punição será dada para todos os envolvidos: todos do grupo que copiou e todos do grupo que forneceu a cópia.  
+  - A detecção de plágio em qualquer um dos exercícios implicará nota 0 (zero) em todo o trabalho.  
+  - É permitido usar, com ou sem modificação, qualquer trecho dos códigos feitos durante as aulas de laboratório e disponibilizados pelo seu professor no sistema e-Disciplinas. Isso não será considerado fraude.  
+
+5. Alguns exercícios dessa lista pedem funcionalidades que nem sempre são vantajosas. Essas funcionalidades são pedidas apenas por motivos didáticos. O objetivo é avaliar sua compreensão em relação às estruturas de dados envolvidas ou para ajudar a desenvolver sua lógica de programação. Em caso de dúvida, consulte seu professor.  
+
+6. Erros de compilação/execução: antes de submeter o trabalho, certifique-se que não há erros de código. Exercício que não possam ser compilados receberão nota 0 (zero).  
+
+O que deve ser submetido?  
+  - Cada grupo deverá submeter um arquivo .zip contendo:  
+    - 1 arquivo chamado grupo.txt informando o nome e No USP de todos os componentes do grupo;  
+    - 1 pasta zip para cada exercício nomeadas como exerc1, exerc2, ..., exercN  
+    - Na pasta de cada exercício, devem ser adicionados apenas os arquivos .h e .c utilizados para esse exercício. Não deve haver nenhum outro tipo de arquivo ou pasta dentro.  
+    - Espera-se que a pasta de cada exercício contenha:  
+      - um arquivo .h para cada estrutura de dados usada no exercício. Nesse arquivo devem ser adicionadas definições de tipo, constantes, e protótipos das funções que fazem parte da sua interface pública  
+      - um arquivo .c para cada estrutura de dados com o mesmo nome do .h. Esse arquivo deve implementar as funções declaradas no arquivo .h.  
+      - um arquivo chamado main.c que deve ser usado apenas para chamar e testar as funções que implementam o que foi pedido no exercício. Essa função deve chamar todos os arquivos .h necessários.  
+
+- A violação de qualquer uma das regras acima, poderá acarretar nota 0 no exercício.
