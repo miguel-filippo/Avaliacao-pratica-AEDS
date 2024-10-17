@@ -51,7 +51,7 @@ int verificaBalanceamento(Queue* filaPrincipal, Stack* pilhaAuxiliar) {
 // Função para testar a função verificaBalanceamento()
 void testa_verificaBalanceamento() {
     int n;
-    printf("Digite o número de testes: ");
+    printf("Digite o numero de testes: ");
     scanf("%d", &n); // Recebe o número de testes
 
     char testes[n][100]; // Cria um vetor de strings para armazenar os testes
@@ -73,55 +73,45 @@ void testa_verificaBalanceamento() {
 
     // Imprime as filas antes de chamar a função
     printf("=========Antes dos testes=========\n");
-    printf("Fila 1: ");
-    printQueue(test1Queue);
-    printf("Fila 2: ");
-    printQueue(test2Queue);
-    printf("Fila 3: ");
-    printQueue(test3Queue);
-    printf("Fila 4: ");
-    printQueue(test4Queue);
+    for (int i = 1; i <= n; i++) {
+        printf("Fila %d: ", i);
+        printQueue(testesQueue[i]);
+    }
     printf("==================================\n");
 
-    print("\n");
+    printf("\n");
     
     // Chama a função e imprime o resultado dos testes
-    printf("Test 1: %s - %s\n", test1, bracketsBalance(test1Queue, pilhaAuxiliar) ? "Balanced" : "Not Balanced");
-    printf("Test 2: %s - %s\n", test2, bracketsBalance(test2Queue, pilhaAuxiliar) ? "Balanced" : "Not Balanced");
-    printf("Test 3: %s - %s\n", test3, bracketsBalance(test3Queue, pilhaAuxiliar) ? "Balanced" : "Not Balanced");
-    printf("Test 4: %s - %s\n", test4, bracketsBalance(test4Queue, pilhaAuxiliar) ? "Balanced" : "Not Balanced");
+    for (int i = 1; i <= n; i++) {
+        if (verificaBalanceamento(testesQueue[i], pilhaAuxiliar)) {
+            printf("Teste %d: Balanceado\n", i);
+        } else {
+            printf("Teste %d: Nao balanceado\n", i);
+        }
+    }
 
-    print("\n");
+    printf("\n");
 
     // Imprime as filas depois de chamar a função
     printf("=========Depois dos testes=========\n");
-    printf("Fila 1: ");
-    printQueue(test1Queue);
-    printf("Fila 2: ");
-    printQueue(test2Queue);
-    printf("Fila 3: ");
-    printQueue(test3Queue);
-    printf("Fila 4: ");
-    printQueue(test4Queue);
+    for (int i = 1; i <= n; i++) {
+        printf("Fila %d: ", i);
+        printQueue(testesQueue[i]);
+    }
     printf("==================================\n");
 
     // Limpa as filas e a pilha
     clearStack(pilhaAuxiliar);
 
-    free(test1Queue->data);
-    free(test2Queue->data);
-    free(test3Queue->data);
-    free(test4Queue->data);
-
-    free(test1Queue);
-    free(test2Queue);
-    free(test3Queue);
-    free(test4Queue);
+    for (int i = 1; i <= n; i++) {
+        free(testesQueue[i]->data);
+        free(testesQueue[i]);
+    }
 
     free(pilhaAuxiliar);
 }
 
 int main() {
-    testa_bracketsBalance();
+    testa_verificaBalanceamento();
     return 0;
 }
