@@ -14,7 +14,7 @@ void pushHead(DoubleStack* stack, int value){
         stack->data[stack->head++] = value;
     }
     else{
-        printf("Index error: Stack is full, could not push %d to head\n", value);
+        printf("Erro de indice: A pilha esta cheia, nao foi possivel adicionar %d na base\n", value);
     }
 }
 
@@ -23,7 +23,7 @@ void pushTail(DoubleStack* stack, int value){
         stack->data[stack->tail--] = value;
     }
     else{
-        printf("Index error: Stack is full, could not push %d to tail\n", value);
+        printf("Erro de indice: A pilha esta cheia, nao foi possivel adicionar %d no topo\n", value);
     }
 }
 
@@ -32,7 +32,7 @@ int popHead(DoubleStack* stack){
         return stack->data[--stack->head];
     }
     else{
-        printf("Index error: Stack is empty, could not pop head\n");
+        printf("Erro de indice: A pilha esta vazia, nao foi possivel remover da base\n");
         return -1;
     }
 }
@@ -42,7 +42,7 @@ int popTail(DoubleStack* stack){
         return stack->data[++stack->tail];
     }
     else{
-        printf("Index error: Stack is empty, could not pop tail\n");
+        printf("Erro de indice: A pilha esta vazia, nao foi possivel remover do topo\n");
         return -1;
     }
 }
@@ -56,7 +56,7 @@ int isEmpty(DoubleStack* stack){
 }
 
 void printDoubleStack(DoubleStack* stack){
-    printf("DoubleStack: ");
+    printf("PilhaDupla: ");
     for (int i = 0; i < stack->size; i++){
         if (i < stack->head || i > stack->tail){
             printf("%d ", stack->data[i]);
