@@ -68,7 +68,7 @@ void insertHead(Lista* lista, int data){
 
     if (getSize(lista)==0){
         lista->head = newNode;
-        lista->tail = newNode;
+                lista->tail = newNode;
     }
     else{
         newNode->next = lista->head;
