@@ -225,6 +225,15 @@ int removerLNSE(LNSE *lnse, int i) {
         return -1;
     }
 
+    if (i == 0) {
+        int value = lnse->registers[lnse->head].value;
+        lnse->head = lnse->registers[lnse->head].next;
+
+        enqueue(lnse->freePositions, lnse->head);
+
+        return value;
+    }
+
     int tempPos = lnse->head;
 
     for (int j = 0 ; j < i - 1; j++) {

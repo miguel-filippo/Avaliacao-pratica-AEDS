@@ -20,6 +20,6 @@ int main()
     printf("\nPreorder: ");
     strPreorder(tree->root);
 
-    printf("\nSoma de cada caminho: ");
+    printf("\nSoma de cada caminho: \n");
     caminhos(tree->root, 0);
 }

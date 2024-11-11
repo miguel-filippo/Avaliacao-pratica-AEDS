@@ -33,15 +33,10 @@ int main(void) {
     printf("A pilha esta vazia? %s\n", isEmpty(stack) ? "Sim" : "Nao");
 
     // Preencher a pilha completamente
-    pushHead(stack, 4);
-    pushHead(stack, 5);
-    pushHead(stack, 6);
-    pushTail(stack, 7);
-    pushTail(stack, 8);
-    pushTail(stack, 9);
-    pushHead(stack, 10);
-    pushTail(stack, 11);
-    pushTail(stack, 12);
+    for (int i = 4 ; i <= 12 ; i++) {
+        pushHead(stack, i);
+        printf("Inserido na base: %d\n", i);
+    }
 
     // Imprimir a pilha novamente
     printDoubleStack(stack);
